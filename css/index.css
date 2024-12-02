@@ -38,9 +38,41 @@ html, body {
 }
 
 .navBar li:hover {
-    background-color: yellow; /* Change background on hover */
-    color: black; /* Change text color on hover */
+    background-color: lightgrey;
+    color: black;
 }
+
+
+
+.navBar-back {
+    position: absolute; /* Allows precise positioning */
+    top: 0; /* Position at the top of the page */
+    right: 2000; /* Position at the right edge of the page */
+    margin: 20px; /* Add some spacing from the edges */
+}
+
+.navBar-back ul {
+    list-style-type: none; /* Removes bullet points from list */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navBar-back li {
+    cursor: pointer; /* Makes it look clickable */
+    padding: 20px 35px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    color: white; /* Text color */
+    margin: 0px 10px; /* Spacing between items */
+    border-radius: 5px; /* Rounded corners */
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+.navBar-back li:hover {
+    background-color: lightgrey;
+    color: black;
+}
+
 
 
 .testButton {
@@ -79,6 +111,14 @@ html, body {
     font-weight: 200;
     font-style: "Poppins", san-serif;
     color: lightgrey;
+}
+
+.backgroundText p {
+    max-width: 90ch;
+}
+
+.backgroundText a {
+    cursor: pointer;
 }
 
 .xssInput {
