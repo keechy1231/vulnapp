@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div class="backgroundImageMain">
+    <div class="backgroundImageMain" id="backgroundImageContainer">
         <div class="navBar-back">
             <ul>
                 <li onclick="window.location.href='/xss/xss.html'">back</li>
@@ -35,6 +35,8 @@
         </div>
     </div>
     <script>
+        localStorage.clear();
+
         document.addEventListener('DOMContentLoaded', function () {
             // Destroy existing instance if present
             if (CKEDITOR.instances.editor1) {
@@ -62,5 +64,6 @@
         });
     </script>
     <script src="/js/header.js"></script>
+    <script src="/js/background.js"></script>
 </body>
 </html>

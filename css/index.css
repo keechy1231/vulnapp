@@ -9,7 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     border: 0;
-    overflow: hidden;
+    overflow: auto; 
 }
 
 
@@ -90,19 +90,23 @@ html, body {
 }
 
 .backgroundImageMain {
-    position: relative; /* Ensures that child elements can be positioned relative to this */
+    position: relative;
     background-image: url('../img/background.jpg');
-    background-size: cover; 
-    background-position: center; /* Centers the image within the container */
-    height: 100vh; /* Makes the container full-screen height */
-    color: white; /* Text color */
-    display: flex; /* Flexbox for centering text */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen height */
+    color: white;
+    display: flex;
     flex-direction: column;
-    align-items: top; /* Vertically center text */
-    justify-content: left; /* Horizontally center text */
-    text-align: center; /* Centers text in the container */
+    align-items: top;
+    justify-content: left;
+    text-align: center;
     padding: 25px;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
+
+
 
 .backgroundText {
     padding-top: 50px;
