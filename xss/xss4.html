@@ -38,6 +38,7 @@
         localStorage.clear();
 
         document.addEventListener('DOMContentLoaded', function () {
+            CKEDITOR.config.versionCheck = false;
             // Destroy existing instance if present
             if (CKEDITOR.instances.editor1) {
                 CKEDITOR.instances.editor1.destroy();
@@ -45,7 +46,7 @@
 
             // Initialize CKEditor
             CKEDITOR.replace('editor1', {
-                allowedContent: true // Allow all HTML content
+                allowedContent: true
             });
 
             // Save button functionality
