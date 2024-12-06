@@ -145,8 +145,8 @@ html, body {
 .labSelect li {
     list-style-type: none;
     cursor: pointer; 
-    width: 80%; /* Adjust the width as needed (e.g., 80% of the container) */
-    max-width: 500px; /* Add a max-width for larger screens */
+    width: 80%; 
+    max-width: 500px; 
     padding: 20px 35px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white; 
