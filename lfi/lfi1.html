@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PGG Playground</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <div id="header-container"></div>
+            <div class="backgroundText">
+                <h1>Local File Inclusion Playground</h1>
+                <input id="textSelection" placeholder="Enter file name (e.g., 'testing.txt')" />
+                <div id="textSection" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+            </div>
+            <script src="/js/header.js"></script>
+            <script>
+                const inputField = document.getElementById('textSelection');
+        
+                inputField.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        const textSelection = inputField.value.trim(); // Get the trimmed value
+                        if (textSelection) {
+                            readTextFile(textSelection); // Call the function if value is not empty
+                        } else {
+                            alert("Please enter a valid file name.");
+                        }
+                    }
+                });
+        
+                function readTextFile(fileName) {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.open("GET", fileName, true);
+                    rawFile.onreadystatechange = function () {
+                        if (rawFile.readyState === 4) {
+                            if (rawFile.status === 200) {
+                                var allText = rawFile.responseText;
+                                document.getElementById("textSection").innerHTML = `<pre>${allText}</pre>`;
+                            } else {
+                                document.getElementById("textSection").innerHTML = `Error: Unable to fetch the file. (HTTP ${rawFile.status})`;
+                            }
+                        }
+                    };
+                    rawFile.send();
+                }
+            </script>
+        </body>
+        </html>
