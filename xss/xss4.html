@@ -36,8 +36,6 @@
         </div>
     </div>
     <script>
-        localStorage.clear();
-
         document.addEventListener('DOMContentLoaded', function () {
             CKEDITOR.config.versionCheck = false;
             // Destroy existing instance if present
@@ -58,6 +56,7 @@
             });
 
             // Load saved content on page load
+            localStorage.setItem('editorContent', '<h1>test Page</h1><p>this is made with a wysiwyg editor</p>')
             var savedData = localStorage.getItem('editorContent');
             if (savedData) {
                 CKEDITOR.instances.editor1.setData(savedData);
