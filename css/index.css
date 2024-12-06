@@ -145,20 +145,23 @@ html, body {
 .labSelect li {
     list-style-type: none;
     cursor: pointer; 
+    width: 80%; /* Adjust the width as needed (e.g., 80% of the container) */
+    max-width: 500px; /* Add a max-width for larger screens */
     padding: 20px 35px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white; 
-    margin: 50px 400px; 
+    margin: 50px auto; 
     border-radius: 25px;
     transition: 0.3s;
     text-align: left;
-    font-size: 2rem; 
+    font-size: 1rem; 
     font-weight: bold; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     text-align: left; 
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: "Poppins", san-serif;
+    background-size: 1px;
 }
 
 .labSelect li:hover {
