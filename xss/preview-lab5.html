@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PGG Playground</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/4.11.0/full/ckeditor.js"></script>
+    <style>
+        /* Fix for Source mode */
+        .cke_source {
+            background: #fff !important;
+            color: #000 !important;
+            pointer-events: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="backgroundImageMain" id="backgroundImageContainer">
+        <div class="navBar-back">
+            <ul>
+                <li onclick="window.location.href='/xss/xss4.html'">back</li>
+            </ul>
+        </div>
+        <div id="header-container"></div>
+        <div class="backgroundText">
+            <h1>XSS Playground</h1>
+            <div id="output" style="margin-top: 20px; border: 1px solid #ddd; padding: 10px;">
+                <div id="savedContent"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+            // Load saved content on page load and Emcode it
+            var savedData = localStorage.getItem('editorContent');
+            if (savedData) {
+                document.getElementById('savedContent').innerHTML = savedData;
+            
+        };
+    </script>
+    <script src="/js/header.js"></script>
+</body>
+</html>
