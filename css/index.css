@@ -5,6 +5,7 @@
 }
 
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     border: 0;
@@ -47,8 +48,6 @@ html, body {
     color: black;
 }
 
-
-
 .navBar-back {
     position: absolute; /* Allows precise positioning */
     top: 0; /* Position at the top of the page */
@@ -78,8 +77,6 @@ html, body {
     color: black;
 }
 
-
-
 .testButton {
     color: black;
     background-color: lightgray;
@@ -92,14 +89,13 @@ html, body {
     cursor: pointer;
 }
 
-
 .backgroundText {
     padding: 4%;
     padding-top: 4%;
-    font-size: 1rem; /* Adjust text size */
-    font-weight: bold; /* Makes text bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
-    text-align: left; /* Aligns text content */
+    font-size: 1rem; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-align: left; 
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: "Poppins", san-serif;
